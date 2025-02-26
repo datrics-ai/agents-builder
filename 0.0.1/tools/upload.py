@@ -44,7 +44,7 @@ def _upload(registry: Registry, env: Environment) -> nearai.EntryLocation:
 
     for file in files_in_thread:
         # Don't upload state.json file
-        if file.filename == "state.json":
+        if file.filename.find("state.json") >= 0:
             continue
         # Don't upload metadata file.
         if file.filename == metadata_path:
@@ -64,7 +64,7 @@ def _upload(registry: Registry, env: Environment) -> nearai.EntryLocation:
         try:
             registry.api.upload_file_v1_registry_upload_file_post(
                 path="agent.py",
-                file=Context().state.copy(),
+                file=Context().state.agent_py.encode('utf-8'),
                 namespace=entry_location.namespace,
                 name=entry_location.name,
                 version=entry_location.version,

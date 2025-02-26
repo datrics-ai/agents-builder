@@ -1,7 +1,7 @@
 {
-  "name": "datrics-agent-builder",
+  "name": "agents-builder",
   "display_name": "Meta Agent",
-  "version": "0.0.48",
+  "version": "0.0.1",
   "description": "This is meta-agent, it can help you create other agents using conversation.",
   "category": "agent",
   "tags": [],
