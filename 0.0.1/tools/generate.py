@@ -164,6 +164,24 @@ def generate(agent_name: str, agent_description: str, agent_technical_plan: str)
     context.state.agent_description = agent_description
     env = context.env
 
+
+    new_technical_plan = env.completion([
+        {
+            "role": "assistant",
+            "content": "You're very good software architect. "
+                       "You should analyze user's message and if it has additional requirements or details "
+                       "you must include them into the current technical plan. "
+                       "If there is no requiremnts then just leave plan as is."
+        },
+        {
+            "role": "assistant",
+            "content": f"Current technical plan is: {agent_technical_plan}"
+        },
+        env.get_last_message()
+    ])
+
+    agent_technical_plan = new_technical_plan
+
     env.add_system_log("Generating agent...")
     try:
         create_metadata(agent_name, agent_description)

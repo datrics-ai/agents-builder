@@ -50,6 +50,7 @@ For the agent, you need to use a custom framework, use it when you create or upd
 1. You can't directly use `os` module
 2. You are given a `env` object that has the following methods:
 - env.list_messages() - list of messages in the conversation in format of [{{"role": "user", "content": "message"}}, {{"role": "assistant", "content": "message"}}]. This is an array of Message objects, not a JSON string.
+- env.get_last_message() - return the last user message in format {"role": "user", "content": "message"}
 - env.completion(messages) - completion a message to the LLM, returns a string.
 - env.add_reply(message) - add a message to the conversation
 - env.write_file(filename, content) - write content to a file (use this instead of `open` or `with open`)
@@ -124,7 +125,7 @@ You are given a description of what should be changed in the code:
 {agent_change_technical_plan}
 </description>
 
-You need to re-write `agent.py` that implements the agent with the set of changed.
+You need to re-write `agent.py` that implements the agent with the set of changes.
 
 {framework_prompt}
 

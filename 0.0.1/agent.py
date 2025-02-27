@@ -116,7 +116,7 @@ try:
                                "and generate the new one"
                 })
 
-            messages = prompts + [env.get_last_message("user")]
+            messages = prompts + [env.get_last_message()]
             tools = tool_registry.get_all_tool_definitions()
 
 

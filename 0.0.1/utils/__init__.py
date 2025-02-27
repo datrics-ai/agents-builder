@@ -47,7 +47,7 @@ class Context:
             self._state = state
         except Exception as e:
             self._state = AgentState()
-            self.env.add_system_log(f"Cannot load {filename}, error:\n{format_exc()}")
+            self.env.add_system_log(f"Cannot load state.json, error:\n{format_exc()}")
 
     def dump_state(self):
         filename = f"{Context().env.get_thread().id}_state.json"
