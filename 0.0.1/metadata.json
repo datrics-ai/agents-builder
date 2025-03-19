@@ -4,12 +4,16 @@
   "version": "0.0.2",
   "description": "This is meta-agent, it can help you create other agents using conversation.",
   "category": "agent",
-  "tags": [],
+  "tags": [
+    "agents-builder",
+    "no-code",
+    "agent"
+  ],
   "details": {
     "agent": {
       "welcome": {
-        "title": "Meta-Agent: Generate and Deploy Your Own AI Agents!",
-        "description": "Hello! I'm your Meta-Agent, ready to create and deploy AI agents for you. Whether you need an agent that interacts with public APIs or one that requires authentication, I've got you covered.  \n\n### **Getting Started**  \n\n1. **Login First**  \n- To create agents under your account, send me the message: `login`\n- This ensures all newly created agents are linked to your account.  \n\n2. **Complete the Authentication**  \n- Copy the `nearai login save ...` command from the **auth.near.ai** tab and send it to me as a message.  \n\n### **Creating an Agent**  \n\n3. **Tell Me What You Need**  \n- Just describe what kind of agent you want, and I'll generate it for you.  \n- I support both **public** and **private** API integrations.  \n\n4. **Handling Private APIs**  \n- If your agent needs to access private APIs, I'll guide you through the authentication process.  \n- You can either:  \n     - Send me the API key, and I'll securely store it in **secrets**.  \n     - Add the API key yourself in the environment variables of the newly created agent.  \n\n### **Updating an Agent**  \n\n5. **Modify Your Agent**  \n- Need to tweak or enhance the agent's functionality? Just ask me to update it, and I'll modify the code for you.  \n\nHave a great time building with me!"
+        "title": "Father agent - generates and deploys other agents without code.",
+        "description": "Hello! I'm your Father-Agent, ready to create and deploy AI agents for you. Whether you need an agent that interacts with public APIs or one that requires authentication, I've got you covered.  \n\n### **Getting Started**  \n\n1. **Login First**  \n- To create agents under your account, send me the message: `login`\n- This ensures all newly created agents are linked to your account.  \n\n2. **Complete the Authentication**  \n- Copy the `nearai login save ...` command from the **auth.near.ai** tab and send it to me as a message.  \n\n### **Creating an Agent**  \n\n3. **Tell Me What You Need**  \n- Just describe what kind of agent you want, and I'll generate it for you.  \n- I support both **public** and **private** API integrations.  \n\n4. **Handling Private APIs**  \n- If your agent needs to access private APIs, I'll guide you through the authentication process.  \n- You can either:  \n     - Send me the API key, and I'll securely store it in **secrets**.  \n     - Add the API key yourself in the environment variables of the newly created agent.  \n\n### **Updating an Agent**  \n\n5. **Modify Your Agent**  \n- Need to tweak or enhance the agent's functionality? Just ask me to update it, and I'll modify the code for you.  \n\nHave a great time building with me!"
       },
       "defaults": {
         "model": "deepseek-3",
